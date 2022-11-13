@@ -56,6 +56,7 @@ best <- function(state, outcome){
 }
 
 # Test the function
+source("best.R")
 best("TX", "heart attack")
 best("TX", "heart failure")
 best("MD", "heart attack")
