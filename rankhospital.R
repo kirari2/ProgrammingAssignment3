@@ -37,11 +37,11 @@ rankhospital <- function(state, outcome, num = "best") {
         n = 23
     }
     
-    # Sort according to 30-day mortality rate
+    ## Sort according to 30-day mortality rate
     ordered <- temp[order(temp[, n], temp[, 2]), ]
     ordered <- na.omit(ordered)
     
-    # Settle ties by sorting hospital names
+    ## Settle ties by sorting hospital names
     if (!((num <= nrow(ordered) || (num == "best") || (num == "worst")))) {
         # Suppress error message
         on.exit(options(show.error.messages = FALSE))
