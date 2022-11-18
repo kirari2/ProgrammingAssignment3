@@ -1,9 +1,10 @@
 # R Programming assignment 3
-
-outcome <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
-
 # 3. Ranking hospitals by outcome in a state
 
+# Read data
+outcome <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+
+# rankhospital function
 rankhospital <- function(state, outcome, num = "best") {
     ## Read outcome data
     data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")

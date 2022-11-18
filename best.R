@@ -1,5 +1,4 @@
 # R Programming assignment 3
-
 # 1. Plot the 30-day mortality rates for heart attack
 
 # Read the outcome data into R via the read.csv function
@@ -17,7 +16,7 @@ hist(outcome[, 11],
      main = "30-day mortality rates for heart attack")
 
 # 2. Finding the best hospital in a state
-
+# best function
 best <- function(state, outcome){
     ## Read outcome data
     x <- state
