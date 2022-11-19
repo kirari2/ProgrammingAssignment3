@@ -16,7 +16,7 @@ hist(outcome[, 11],
      main = "30-day mortality rates for heart attack")
 
 # 2. Finding the best hospital in a state
-# best function
+# best
 best <- function(state, outcome){
     ## Read outcome data
     x <- state
