@@ -41,8 +41,7 @@ rankall <- function(outcome, num = "best") {
             z <- 1
         }
         if (num == "worst") {
-            print(length(na.omit(ordered[, n])))
-            # Need to assign a differen variable to represent num in the loop
+            # Need to assign a different variable to represent num in the loop
             z <- length(na.omit(ordered[, n]))
         }
         
@@ -53,7 +52,7 @@ rankall <- function(outcome, num = "best") {
     ## Return a date frame with the hospital names and the (abbreviated) state name
     colnames(output) <- c("hospital", "state")
     rownames(output) <- validState
-    output
+    output <- as.data.frame(output)
 }
 
 # Test the function
