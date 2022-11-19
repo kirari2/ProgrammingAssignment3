@@ -33,8 +33,7 @@ rankall <- function(outcome, num = "best") {
     for (i in seq_along(validState)) {
         temp <- subset(data, State == validState[i])
         ordered <- temp[order(temp[, n], temp[, 2]), ]
-        #ordered <- na.omit(ordered)
-        
+        # ordered <- na.omit(ordered) (Do not need this line for correct answer)
         z <- num
         
         if (num == "best") {
@@ -52,6 +51,7 @@ rankall <- function(outcome, num = "best") {
     ## Return a date frame with the hospital names and the (abbreviated) state name
     colnames(output) <- c("hospital", "state")
     rownames(output) <- validState
+    # output save as data.frame for quiz questions
     output <- as.data.frame(output)
 }
 

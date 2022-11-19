@@ -39,7 +39,7 @@ rankhospital <- function(state, outcome, num = "best") {
     
     ## Sort according to 30-day mortality rate
     ordered <- temp[order(temp[, n], temp[, 2]), ]
-    ordered <- na.omit(ordered)
+    # ordered <- na.omit(ordered) (Do not need this line for correctly answer rankhospital("TX", "pneumonia", 10))
     
     ## Settle ties by sorting hospital names
     if (!((num <= nrow(ordered) || (num == "best") || (num == "worst")))) {
@@ -50,7 +50,7 @@ rankhospital <- function(state, outcome, num = "best") {
         num <- 1
     }
     if (num == "worst") {
-        num <- nrow(ordered)
+        num <- length(na.omit(ordered[, n]))
     }
     print(ordered[num , 2])
 }    
