@@ -1,3 +1,3 @@
-*Introduction*
+**Introduction**
 
-Code for Coursera course: R Programming assignment
+Learning materials for Coursera course: R Programming
